@@ -471,7 +471,7 @@ public class CraftWorld implements World {
     }
 
     public boolean createExplosion(Entity source, double x, double y, double z, float power, boolean setFire, boolean breakBlocks) {
-        if(source == null) {
+        if (source == null) {
             return !world.createExplosion(null, x, y, z, power, setFire, breakBlocks).wasCanceled;
         } else {
             return !world.createExplosion(((CraftEntity) source).getHandle(), x, y, z, power, setFire, breakBlocks).wasCanceled;
